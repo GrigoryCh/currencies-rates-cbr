@@ -1,0 +1,85 @@
+ul li{list-style: none;}
+a,a:visited{text-decoration: none;}
+/* ================================================================================= */
+body {
+   background-color: hsl(212, 33%, 89%);
+}
+.container {
+   margin: 0 auto;
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   max-width: 380px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.title {
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+a {
+   color: inherit;
+   transition: all 0.3s ease 0s;
+}
+a:hover {
+   color: hsl(205, 63%, 48%);
+}
+.list {
+   margin-left: 50px;
+}
+.item {
+   cursor: pointer;
+   position: relative;
+   display: inline-block;
+   margin-bottom: 10px;
+   font-family: inherit;
+}
+
+.item .active {
+   margin-bottom: 0 !important;
+}
+
+.item a {
+      display: inline-grid;
+      grid-template-columns: 40px 1fr 60px;
+      gap: 1rem;
+      justify-content: center;
+}
+
+
+.item .item-text {
+   visibility: hidden;
+   width: 100%;
+   background-color: hsl(205, 63%, 48%);
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   font-family: inherit;
+   /* Position the item */
+   position: absolute;
+   z-index: 1;
+   top: 100%;
+   left: 0;
+   margin-top: 5px;
+}
+
+.item:hover .item-text {
+   visibility: visible;
+}
+
+.sub-list {
+   pointer-events: none;
+   margin: 0.5rem 0 0 1rem;
+
+}
+.item-sub {
+   display: flex;
+   gap: 1rem;
+}
+
+.hidden {
+   display: none;
+}
